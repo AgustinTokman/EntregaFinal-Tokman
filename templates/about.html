@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block cambiante %}
+    <hr>
+    <hr>
+    <hr>
+    <hr><br>
+    
+    <br>
+    <p>Hola! Mi nombre es Agustin Tokman, tengo 21 años, y estoy formandome como programador.
+        Actualmente tengo un trabajo estable, pero me gustaria adentrarme al mundo laboral de la programacion..</p>
+    <p>Por eso, es que decidí hacer el curso de Python de la plataforma Coder House</p>
+    
+    <p>Este soy yo:</p>
+    <img src="{% static "blogs/foto-perfil.jpg" %} height="400px" width="320px"> {# No se porque no me la lee. VER. #}
+    <br><br>
+    <a href="{% url 'inicio' %}">
+        <button>Regresar</button>
+    </a>
+    <hr>
+
+{% endblock %}

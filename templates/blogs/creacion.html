@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block cambiante %}
+    <hr>
+    <hr>
+    <hr>
+    <hr><br>
+    <h6>Publicá LO QUE QUIERAS</h6>
+    Ponele una foto llamativa asi la gente quiere interactuar
+    <br><br>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publicar</button>
+    </form>
+    <br>
+{% endblock %}
