@@ -13,14 +13,15 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ("username", "first_name", "last_name", "email")
 
+User = get_user_model()
 
-class UserEditForm(UserCreationForm):
-
+class UserEditForm(forms.ModelForm):
     first_name = forms.CharField(label="Nombre", max_length=15)
     last_name = forms.CharField(label="Apellido", max_length=15)
     email = forms.EmailField()
     imagen = forms.ImageField()
+    password = forms.PasswordInput()
 
     class Meta:
         model = User
-        fields = ("username", "first_name", "last_name", "email", "imagen")
+        fields = ("username", "first_name", "last_name", "email", "imagen", "password")
