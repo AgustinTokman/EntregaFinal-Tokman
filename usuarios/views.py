@@ -48,7 +48,7 @@ def editar_user(request):  # Vista para que un usuario edite su perfil. Si o si 
     user = request.user
 
     if request.method == "POST":
-        form = UserEditForm(request.POST, request.FILES)
+        form = UserEditForm(request.POST, request.FILES, instance=user)
 
         if form.is_valid():
             informacion = form.cleaned_data
